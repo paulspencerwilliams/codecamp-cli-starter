@@ -12,13 +12,21 @@ public class Cli {
 
 	public void process(InputStream in, PrintStream out) {
 		try (Scanner scanner = new Scanner(in)) {
-			
+			Till till = new Till();
+
 			while (scanner.hasNextLine()) {
 				String line = scanner.nextLine();
 
-				if ("Hello".equals(line)) {
-					out.println("World!");
-				}
+				if ("Apples".equals(line))
+					till.scanApple();
+
+				if ("Bananas".equals(line))
+					till.scanBanana();
+
+				if ("Cherries".equals(line))
+					till.scanCherries();
+
+				out.println(till.getAmount());
 			}
 		}
 	}
