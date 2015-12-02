@@ -12,26 +12,29 @@ public class Cli {
 
 	public void process(InputStream in, PrintStream out) {
 		try (Scanner scanner = new Scanner(in)) {
-			Till till = new Till();
+
 
 			while (scanner.hasNextLine()) {
+				Till till = new Till();
+
 				String line = scanner.nextLine();
 
-				if ("Apples".equals(line))
-					till.scanApple();
+				for(String product : line.split(",")) {
+					if ("Apples".equals(product.trim()))
+						till.scanApple();
 
-				if ("Pommes".equals(line))
-					till.scanApple();
+					if ("Pommes".equals(product.trim()))
+						till.scanPommes();
 
-				if ("Mele".equals(line))
-					till.scanApple();
+					if ("Mele".equals(product.trim()))
+						till.scanMele();
 
-				if ("Bananas".equals(line))
-					till.scanBanana();
+					if ("Bananas".equals(product.trim()))
+						till.scanBanana();
 
-				if ("Cherries".equals(line))
-					till.scanCherries();
-
+					if ("Cherries".equals(product.trim()))
+						till.scanCherries();
+				}
 				out.println(till.getAmount());
 			}
 		}
