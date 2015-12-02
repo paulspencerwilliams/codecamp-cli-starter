@@ -33,7 +33,7 @@ public class CliTest {
 		
 		new Cli().process(in, printOut);
 		
-		assertThat(toString(out), is("100\r\n175\r\n250\r\n"));
+		assertThat(toString(out), is("100\r\n175\r\n230\r\n"));
 	}
 	
 	private static InputStream newInputStream(String string) {

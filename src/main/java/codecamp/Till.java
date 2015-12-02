@@ -2,6 +2,7 @@ package codecamp;
 
 public class Till {
     private int amount = 0;
+    private boolean oddCherries = false;
     public void scanApple() {
         amount += 100;
     }
@@ -11,7 +12,11 @@ public class Till {
     }
 
     public void scanCherries() {
-        amount += 75;
+        oddCherries = !oddCherries;
+        if (oddCherries)
+            amount += 75;
+        else
+            amount += 55;
     }
 
     public int getAmount() {
