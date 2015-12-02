@@ -20,6 +20,12 @@ public class Cli {
 				if ("Apples".equals(line))
 					till.scanApple();
 
+				if ("Pommes".equals(line))
+					till.scanApple();
+
+				if ("Mele".equals(line))
+					till.scanApple();
+
 				if ("Bananas".equals(line))
 					till.scanBanana();
 

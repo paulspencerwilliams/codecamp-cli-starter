@@ -40,6 +40,6 @@ public class TillTest {
         Till sut = new Till();
         sut.scanCherries();
         sut.scanCherries();
-        assertThat(sut.getAmount(), is(120));
+        assertThat(sut.getAmount(), is(130));
     }
 }

@@ -19,7 +19,7 @@ public class Till {
         if (oddCherries)
             amount += 75;
         else
-            amount += 45;
+            amount += 55;
     }
 
     public int getAmount() {
