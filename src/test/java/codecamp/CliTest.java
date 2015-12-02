@@ -33,7 +33,7 @@ public class CliTest {
 		
 		new Cli().process(in, printOut);
 		
-		assertThat(toString(out), is("World!\n"));
+		assertThat(toString(out), is("World!\r\n"));
 	}
 	
 	private static InputStream newInputStream(String string) {
