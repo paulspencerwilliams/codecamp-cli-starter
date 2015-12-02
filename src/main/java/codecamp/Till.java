@@ -3,12 +3,15 @@ package codecamp;
 public class Till {
     private int amount = 0;
     private boolean oddCherries = false;
+    private boolean oddBananas = false;
     public void scanApple() {
         amount += 100;
     }
 
     public void scanBanana() {
-        amount += 150;
+        oddBananas = !oddBananas;
+        if (oddBananas)
+            amount += 150;
     }
 
     public void scanCherries() {
@@ -16,10 +19,11 @@ public class Till {
         if (oddCherries)
             amount += 75;
         else
-            amount += 55;
+            amount += 45;
     }
 
     public int getAmount() {
         return amount;
     }
 }
+

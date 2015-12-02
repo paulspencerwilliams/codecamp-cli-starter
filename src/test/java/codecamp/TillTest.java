@@ -21,6 +21,14 @@ public class TillTest {
     }
 
     @Test
+    public void scanTwoBananasAdds0() {
+        Till sut = new Till();
+        sut.scanBanana();
+        sut.scanBanana();
+        assertThat(sut.getAmount(), is(150));
+    }
+
+    @Test
     public void scanCherriesAdds75() {
         Till sut = new Till();
         sut.scanCherries();
@@ -28,10 +36,10 @@ public class TillTest {
     }
 
     @Test
-    public void scanTwoCherriesAdds130() {
+    public void scanTwoCherriesAdds120() {
         Till sut = new Till();
         sut.scanCherries();
         sut.scanCherries();
-        assertThat(sut.getAmount(), is(130));
+        assertThat(sut.getAmount(), is(120));
     }
 }

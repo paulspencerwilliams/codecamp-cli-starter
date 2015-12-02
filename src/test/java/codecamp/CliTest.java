@@ -29,11 +29,11 @@ public class CliTest {
 	
 	@Test
 	public void processWithHelloOutputsWorld() throws IOException {
-		InputStream in = newInputStream("Apples\r\nCherries\r\nCherries\r\n");
+		InputStream in = newInputStream("Cherries\r\nCherries\r\nBananas\r\nBananas\r\n");
 		
 		new Cli().process(in, printOut);
 		
-		assertThat(toString(out), is("100\r\n175\r\n230\r\n"));
+		assertThat(toString(out), is("75\r\n120\r\n270\r\n270\r\n"));
 	}
 	
 	private static InputStream newInputStream(String string) {
